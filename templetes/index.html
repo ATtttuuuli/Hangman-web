@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <style>  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu du Pendu - Choisissez un Niveau</title>
+    <link rel="stylesheet"  href="css/level.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Bienvenue dans le Jeu du Pendu</h1>
+            <p class="amezwar">Testez vos connaissances avec le jeu du pendu.Entez votre pseudo et  Choisissez un niveau et commencez à jouer !</p>
+            <form action="/hangman" method="get" class="username-form">
+                <div class="form-group">
+                    <label for="username">Votre Pseudo :</label>
+                    <input type="text" id="username" name="username" placeholder="Entrez votre pseudo" required>
+                </div>
+            </form>
+            <div class="levels">
+                <p><a href="/hangman?level=easy" class="level-button"><span>Niveau Facile :</span><br> Le niveau facile est parfait pour les débutants. Les mots sont courts, généralement entre 3 et 4 lettres, et utilisent des lettres fréquemment rencontrées dans la langue française. C'est le niveau idéal pour s'initier au jeu du pendu sans trop de pression. Si vous êtes nouveau dans le jeu, commencez ici et testez vos compétences!</br></a></p>
+                <p><a href="/hangman?level=medium" class="level-button"><span>Niveau Moyen :</span><br> Le niveau moyen est conçu pour les joueurs qui ont déjà une expérience de base du jeu du pendu. Les mots sont un peu plus longs (5 à 6 lettres) et incluent parfois des lettres moins courantes, ce qui rend le défi plus intéressant. Ce niveau offre un bon équilibre entre facilité et difficulté, idéal pour ceux qui cherchent à tester leurs connaissances sans être trop submergés.
+                </br></a></p>
+                <p><a href="/hangman?level=hard" class="level-button"><span>Niveau Difficile :</span><br> Le niveau difficile est réservé aux experts du jeu du pendu ! Les mots sont longs (7 lettres et plus) et comprennent souvent des lettres rares ou des combinaisons peu courantes. Ce niveau vous mettra à l'épreuve et exigera de vous une bonne connaissance du vocabulaire, ainsi qu'une excellente stratégie de réflexion. Prêt à relever le défi ? Seuls les meilleurs parviendront à gagner !</br></a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

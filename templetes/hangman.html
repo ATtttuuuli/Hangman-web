@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu du Pendu</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Oswald:wght@200..700&display=swap');
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Jeu du Pendu 
+            
+        Niveau : {{.Level}}</h1>
+
+        <div class="game-info">
+            <p>Mot à deviner : {{.Word}}</p>
+            <p>Lettre(s) déjà proposée(s) : 
+                <span>{{range .UsedLetters}}{{.}} {{end}}</span>
+            </p>
+            <p>Nombre de tentatives restantes : {{.Attempts}}</p>
+        </div>
+
+        <div class="game-character">
+            <img src="{{.ImagePath}}" alt="Hangman" />
+        </div>
+
+        <form action="/hangman?level={{.Level}}" method="POST">
+            <input type="text" name="letter" maxlength="1" required>
+            <button type="submit">Proposer</button>
+        </form>
+
+        {{if .IsGameOver}}
+        <p>Jeu terminé! Le mot était : {{.Word}}</p>
+        {{if .IsWinner}}<p>Félicitations, vous avez gagné !</p>{{else}}<p>Dommage, vous avez perdu...</p>{{end}}
+        <div class="play-again">
+            <form action="/hangman?level={{.Level}}&reset=true" method="POST">
+                <button type="submit">Jouer à nouveau</button>
+            </form>
+        </div>
+    {{end}}
+        <div class="back-to-home">
+            <a href="/" class="btn-back-home">Retour à l'accueil</a>
+        </div>
+    </div>
+</body>
+</html>
