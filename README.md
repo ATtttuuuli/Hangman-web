@@ -16,7 +16,7 @@ Ouvrez un terminal dans le dossier du projet cloné et exécutez la commande sui
 bash
 Copier le code
 go run main.go
-Une fois l'application lancée, ouvrez votre navigateur et accédez à l'adresse suivante : http://localhost:8080 pour commencer à jouer !
+Une fois l'application lancée, ouvrez votre navigateur et accédez à l'adresse suivante : http://localhost:8081 pour commencer à jouer !
 
 Fonctionnalités 🎮
 Page d'Accueil (/index)
