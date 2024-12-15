@@ -1,7 +1,7 @@
 package main
 
 import (
-	HangmanWeb "HangmanWeb/jeu" // Assure-toi que ce chemin est correct
+	HangmanWeb "HangmanWeb/jeu" 
 	"fmt"
 	"html/template"
 	"net/http"
